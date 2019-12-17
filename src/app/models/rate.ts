@@ -1,7 +1,7 @@
 import {Currency} from './currency';
 
-export interface Rates {
-  rate: Currency;
+export interface Rate {
+  rates: Currency;
   base: string;
   date: string;
 }
