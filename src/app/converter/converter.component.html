@@ -1,4 +1,31 @@
-<p>converter works!  ->> {{currencyTRY}}</p>
+<div class="card">
+  <div class="card-header">
+    Featured
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">Special title treatment</h5>
+    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
 
-
-
+    <div class="row">
+      <div class="col">
+        <div class="input-group mb-3">
+            <input type="number" class="form-control" [ngModel]="this.toValue">
+            <select class="form-control"  [(ngModel)]="to">
+              <option *ngFor="let data of this.currencyEnum" [value]="data">{{data}}</option>
+            </select>
+        </div>
+      </div>
+      <div class="col">
+        <div class="input-group mb-3">
+          <input type="number" class="form-control" [ngModel]="this.fromValue">
+          <select class="form-control" [(ngModel)]="from">
+            <option *ngFor="let data of this.currencyEnum" [value]="data">{{data}}</option>
+          </select>
+        </div>
+      </div>
+      <div class="col">
+        <button class="btn btn-primary form-control" (click)="convert()">Convert</button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,4 +1,10 @@
-export class CurrencyEnum {
+import {Injectable} from '@angular/core';
+
+export class Currencies {
+
+  constructor() {
+  }
+
   types: string [] = [
   'CAD',
   'HKD',
@@ -32,4 +38,9 @@ export class CurrencyEnum {
   'GBP',
   'KRW',
   'MYR'];
+
+
+  getTypes(): string[] {
+    return this.types;
+  }
 }
