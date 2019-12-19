@@ -29,6 +29,8 @@ export class GraphComponent implements OnInit {
         }]
       });
 
+
+      // TO_DO implement data to graph.
       this.apiService.getMonthlyCurrency('EUR', 'TRY', '2019-11-1', '2019-12-1').subscribe((data) => {
        this.rate = data;
         });
