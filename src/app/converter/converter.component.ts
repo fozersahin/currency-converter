@@ -1,10 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {CurrencyApiService} from '../services/currency-api.service';
-import {Rate} from '../models/rate';
-import {takeUntil} from 'rxjs/operators';
 import {Currency} from '../models/currency';
 import {Currencies} from '../models/currencies';
-import {Values} from '../models/values.enum';
 
 @Component({
   selector: 'app-converter',
@@ -34,18 +31,10 @@ export class ConverterComponent implements OnInit {
   }
 
   convert() {
-    console.log(this.from);
-    console.log(this.to);
     this.currencyService.getCurrency(this.to, this.from).subscribe( data => {
       this.rates = data.rates;
-
       this.rate = this.rates[this.from];
-      console.log(this.toValue);
-      console.log(this.rate);
       this.fromValue = this.rate * this.toValue;
-      console.log(this.fromValue);
-      console.log(this.rates);
-      console.log(this.fromValue);
     });
 
   }
@@ -55,7 +44,7 @@ export class ConverterComponent implements OnInit {
        'EUR',
        'USD',
        'GBP',
-      'CAD',
+       'CAD',
       'HKD',
       'ISK',
       'PHP',

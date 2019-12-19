@@ -7,11 +7,14 @@ import { HttpClientModule } from '@angular/common/http';
 import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 import {MatInputModule, MatOptionModule, MatSelectModule} from '@angular/material';
 import {FormsModule} from '@angular/forms';
+import { GraphComponent } from './graph/graph.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    ConverterComponent
+    ConverterComponent,
+    GraphComponent
   ],
   imports: [
     BrowserModule,
